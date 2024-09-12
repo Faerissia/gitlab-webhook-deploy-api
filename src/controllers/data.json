@@ -1,0 +1,294 @@
+{
+  "object_kind": "pipeline",
+  "object_attributes": {
+    "id": 1447340688,
+    "iid": 2,
+    "name": null,
+    "ref": "develop",
+    "tag": false,
+    "sha": "2f34f2f0e99634276d00fe4cc6f736e8445b3f57",
+    "before_sha": "6b2dcb498574561fb4b74c24dea51f5b2b169189",
+    "source": "push",
+    "status": "failed",
+    "detailed_status": "failed",
+    "stages": [
+      "build",
+      "notify"
+    ],
+    "created_at": "2024-09-10T11:05:12.226Z",
+    "finished_at": "2024-09-10T11:06:47.118Z",
+    "duration": 93,
+    "queued_duration": 1,
+    "variables": [],
+    "url": "https://gitlab.com/forviz/proud-real-estate/proud-residential-platform-api/-/pipelines/1447340688"
+  },
+  "merge_request": null,
+  "user": {
+    "id": 12082996,
+    "name": "Wittawat Chuaypanang",
+    "username": "Newzyz",
+    "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/12082996/avatar.png",
+    "email": "[REDACTED]"
+  },
+  "project": {
+    "id": 61088614,
+    "name": "PROUD Residential Platform API",
+    "description": null,
+    "web_url": "https://gitlab.com/forviz/proud-real-estate/proud-residential-platform-api",
+    "avatar_url": null,
+    "git_ssh_url": "git@gitlab.com:forviz/proud-real-estate/proud-residential-platform-api.git",
+    "git_http_url": "https://gitlab.com/forviz/proud-real-estate/proud-residential-platform-api.git",
+    "namespace": "Proud Real Estate",
+    "visibility_level": 0,
+    "path_with_namespace": "forviz/proud-real-estate/proud-residential-platform-api",
+    "default_branch": "develop",
+    "ci_config_path": ""
+  },
+  "commit": {
+    "id": "2f34f2f0e99634276d00fe4cc6f736e8445b3f57",
+    "message": "Merge branch 'wittawat' into 'develop'\n\nupdate main.go proud and add app update user\n\nSee merge request forviz/proud-real-estate/proud-residential-platform-api!11",
+    "title": "Merge branch 'wittawat' into 'develop'",
+    "timestamp": "2024-09-10T11:05:10+00:00",
+    "url": "https://gitlab.com/forviz/proud-real-estate/proud-residential-platform-api/-/commit/2f34f2f0e99634276d00fe4cc6f736e8445b3f57",
+    "author": {
+      "name": "Wittawat Chuaypanang",
+      "email": "nooknet102@gmail.com"
+    }
+  },
+  "builds": [
+    {
+      "id": 7787015670,
+      "stage": "build",
+      "name": "build_proud_service",
+      "status": "failed",
+      "created_at": "2024-09-10T11:05:12.241Z",
+      "started_at": "2024-09-10T11:05:13.223Z",
+      "finished_at": "2024-09-10T11:06:32.596Z",
+      "duration": 79.373126,
+      "queued_duration": 0.315452,
+      "failure_reason": "script_failure",
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "id": 12082996,
+        "name": "Wittawat Chuaypanang",
+        "username": "Newzyz",
+        "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/12082996/avatar.png",
+        "email": "[REDACTED]"
+      },
+      "runner": {
+        "id": 12270807,
+        "description": "1-blue.saas-linux-small-amd64.runners-manager.gitlab.com/default",
+        "runner_type": "instance_type",
+        "active": true,
+        "is_shared": true,
+        "tags": [
+          "saas-linux-small-amd64"
+        ]
+      },
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      },
+      "environment": {
+        "name": "dev",
+        "action": "start",
+        "deployment_tier": "development"
+      }
+    },
+    {
+      "id": 7787015671,
+      "stage": "build",
+      "name": "build_proud_migration",
+      "status": "failed",
+      "created_at": "2024-09-10T11:05:12.252Z",
+      "started_at": "2024-09-10T11:05:13.261Z",
+      "finished_at": "2024-09-10T11:06:31.665Z",
+      "duration": 78.404512,
+      "queued_duration": 0.24631,
+      "failure_reason": "script_failure",
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "id": 12082996,
+        "name": "Wittawat Chuaypanang",
+        "username": "Newzyz",
+        "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/12082996/avatar.png",
+        "email": "[REDACTED]"
+      },
+      "runner": {
+        "id": 12270831,
+        "description": "2-blue.saas-linux-small-amd64.runners-manager.gitlab.com/default",
+        "runner_type": "instance_type",
+        "active": true,
+        "is_shared": true,
+        "tags": [
+          "saas-linux-small-amd64"
+        ]
+      },
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      },
+      "environment": {
+        "name": "dev",
+        "action": "start",
+        "deployment_tier": "development"
+      }
+    },
+    {
+      "id": 7787015676,
+      "stage": "build",
+      "name": "build_proud_utility",
+      "status": "failed",
+      "created_at": "2024-09-10T11:05:12.266Z",
+      "started_at": "2024-09-10T11:05:16.449Z",
+      "finished_at": "2024-09-10T11:06:34.165Z",
+      "duration": 77.715473,
+      "queued_duration": 3.338528,
+      "failure_reason": "script_failure",
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "id": 12082996,
+        "name": "Wittawat Chuaypanang",
+        "username": "Newzyz",
+        "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/12082996/avatar.png",
+        "email": "[REDACTED]"
+      },
+      "runner": {
+        "id": 12270831,
+        "description": "2-blue.saas-linux-small-amd64.runners-manager.gitlab.com/default",
+        "runner_type": "instance_type",
+        "active": true,
+        "is_shared": true,
+        "tags": [
+          "saas-linux-small-amd64"
+        ]
+      },
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      },
+      "environment": {
+        "name": "dev",
+        "action": "start",
+        "deployment_tier": "development"
+      }
+    },
+    {
+      "id": 7787015681,
+      "stage": "notify",
+      "name": "notify_build_proud_migration_fail",
+      "status": "success",
+      "created_at": "2024-09-10T11:05:12.301Z",
+      "started_at": "2024-09-10T11:06:31.951Z",
+      "finished_at": "2024-09-10T11:06:44.390Z",
+      "duration": 12.439237,
+      "queued_duration": 0.136476,
+      "failure_reason": null,
+      "when": "on_failure",
+      "manual": false,
+      "allow_failure": true,
+      "user": {
+        "id": 12082996,
+        "name": "Wittawat Chuaypanang",
+        "username": "Newzyz",
+        "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/12082996/avatar.png",
+        "email": "[REDACTED]"
+      },
+      "runner": {
+        "id": 12270837,
+        "description": "4-blue.saas-linux-small-amd64.runners-manager.gitlab.com/default",
+        "runner_type": "instance_type",
+        "active": true,
+        "is_shared": true,
+        "tags": [
+          "saas-linux-small-amd64"
+        ]
+      },
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      },
+      "environment": null
+    },
+    {
+      "id": 7787015678,
+      "stage": "notify",
+      "name": "notify_build_proud_service_fail",
+      "status": "success",
+      "created_at": "2024-09-10T11:05:12.282Z",
+      "started_at": "2024-09-10T11:06:32.869Z",
+      "finished_at": "2024-09-10T11:06:46.242Z",
+      "duration": 13.37239,
+      "queued_duration": 0.126294,
+      "failure_reason": null,
+      "when": "on_failure",
+      "manual": false,
+      "allow_failure": true,
+      "user": {
+        "id": 12082996,
+        "name": "Wittawat Chuaypanang",
+        "username": "Newzyz",
+        "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/12082996/avatar.png",
+        "email": "[REDACTED]"
+      },
+      "runner": {
+        "id": 12270835,
+        "description": "3-blue.saas-linux-small-amd64.runners-manager.gitlab.com/default",
+        "runner_type": "instance_type",
+        "active": true,
+        "is_shared": true,
+        "tags": [
+          "saas-linux-small-amd64"
+        ]
+      },
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      },
+      "environment": null
+    },
+    {
+      "id": 7787015684,
+      "stage": "notify",
+      "name": "notify_build_proud_utility_fail",
+      "status": "success",
+      "created_at": "2024-09-10T11:05:12.315Z",
+      "started_at": "2024-09-10T11:06:34.648Z",
+      "finished_at": "2024-09-10T11:06:47.005Z",
+      "duration": 12.357257,
+      "queued_duration": 0.242718,
+      "failure_reason": null,
+      "when": "on_failure",
+      "manual": false,
+      "allow_failure": true,
+      "user": {
+        "id": 12082996,
+        "name": "Wittawat Chuaypanang",
+        "username": "Newzyz",
+        "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/12082996/avatar.png",
+        "email": "[REDACTED]"
+      },
+      "runner": {
+        "id": 12270807,
+        "description": "1-blue.saas-linux-small-amd64.runners-manager.gitlab.com/default",
+        "runner_type": "instance_type",
+        "active": true,
+        "is_shared": true,
+        "tags": [
+          "saas-linux-small-amd64"
+        ]
+      },
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      },
+      "environment": null
+    }
+  ]
+}
