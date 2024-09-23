@@ -15,7 +15,6 @@ export const ErrorModel = (data: string) => {
 export const DiscordWebhook = async (data: string) => {
   await axios.post(process.env.DISCORD_WEBHOOK as string, {
     content: data,
-    embeds: [{ title: "---------------------------------------------" }],
   });
   return true;
 };
@@ -54,6 +53,10 @@ export const statusEmoji = (status: string) => {
 
 export const buildStage = (build: object[]) => {
   const stageUse = ["build", "migrate", "deploy"];
+
+  if (!Array.isArray(build) || build.length === 0) {
+    return "No build Stages avliable.";
+  }
 
   const filter = build.filter((item: any) => stageUse.includes(item.stage));
 
