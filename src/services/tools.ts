@@ -51,7 +51,7 @@ export const statusEmoji = (status: string) => {
   return "🚧";
 };
 
-export const buildStage = (build: object[]) => {
+export const buildStage = (build: object[] = []) => {
   const stageUse = ["build", "migrate", "deploy"];
 
   if (!Array.isArray(build) || build.length === 0) {
