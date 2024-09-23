@@ -3,6 +3,7 @@ import axios from "axios";
 const user = [
   { email: "firstlnw0099@gmail.com", discord_id: "325658446672166912" },
   { email: "nooknet102@gmail.com", discord_id: "313328014710800384" },
+  { email: "chonlatee1129@gmail.com", discord_id: "312455071038308362" },
 ];
 
 export const ErrorModel = (data: string) => {
