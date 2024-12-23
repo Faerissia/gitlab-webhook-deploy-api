@@ -4,6 +4,8 @@ const user = [
   { email: "firstlnw0099@gmail.com", discord_id: "325658446672166912" },
   { email: "nooknet102@gmail.com", discord_id: "313328014710800384" },
   { email: "chonlatee1129@gmail.com", discord_id: "312455071038308362" },
+  { email: "apiwat.r.janapaisarn@gmail.com", discord_id: "735061999800549398" },
+  { email: "kitsada8621@gmail.com", discord_id: "804377551438086184" },
 ];
 
 export const ErrorModel = (data: string) => {
@@ -31,6 +33,7 @@ export const buildMessage = (data: any) => {
   **Status :** ${data.object_attributes?.status}
   **Branch :** ${data.object_attributes?.ref} 
   **User :** <@${findDiscordId(data.commit.author.email)}> 
+  ** QA มาส่อง Deploy:** <@361527742522458113>
   **Commit :** [${data.commit.title}](${data.commit.url}) \n
   **Pipeline URL:** [View](${data.object_attributes.url})\n
   **Build Stage**\n
