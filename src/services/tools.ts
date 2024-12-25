@@ -35,6 +35,7 @@ export const buildMessage = (data: any) => {
   **User :** <@${findDiscordId(data.commit.author.email)}> 
   ** QA มาส่อง Deploy:** <@361527742522458113>
   **Commit :** [${data.commit.title}](${data.commit.url}) \n
+  **Description :** ${data.commit.message}\n
   **Pipeline URL:** [View](${data.object_attributes.url})\n
   **Build Stage**\n
   ${buildstage}
