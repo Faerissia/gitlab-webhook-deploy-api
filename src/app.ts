@@ -4,9 +4,14 @@ import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
 import router from "./router";
-import dotenv from "dotenv";
 
-dotenv.config();
+import { discordClient } from "./config/discord";
+
+discordClient.on("ready", () => {
+  console.log(`Logged in as ${discordClient.user?.tag}!`);
+});
+
+discordClient.login(process.env.DISCORD_TOKEN);
 
 const app: Application = express();
 
@@ -20,10 +25,8 @@ app.use(compression());
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-const port = process.env.PORT;
-
-app.listen(port, () => {
-  console.log(`App is listening on port ${port}!`);
+app.listen(process.env.PORT, () => {
+  console.log(`App is listening on port ${process.env.PORT}!`);
 });
 
 app.use("/", router);

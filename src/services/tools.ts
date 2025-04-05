@@ -1,4 +1,9 @@
 import axios from "axios";
+import {
+  AudioPlayerStatus,
+  createAudioPlayer,
+  createAudioResource,
+} from "@discordjs/voice";
 
 const user = [
   { email: "firstlnw0099@gmail.com", discord_id: "325658446672166912" },
@@ -86,3 +91,15 @@ export const buildStage = (build: object[] = []) => {
 
   //   console.log(groupData);
 };
+
+export async function playAudio(connection: any, filePath: string) {
+  const player = createAudioPlayer();
+  const resource = createAudioResource(filePath);
+
+  connection.subscribe(player);
+  player.play(resource);
+
+  player.once(AudioPlayerStatus.Idle, () => {
+    connection.destroy();
+  });
+}
