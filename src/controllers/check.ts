@@ -41,13 +41,12 @@ export const GitLabWebHook = async (req: Request, res: Response) => {
   try {
     const filePath = path.join(__dirname, "data.json");
 
-    fs.writeFile(filePath, JSON.stringify(req.body, null, 2), (err) => {
-      if (err) {
-        console.error("error writing file", err);
-        return res.status(500).json({ message: "failed to save the file" });
-      }
-    });
-
+    try {
+      await fs.promises.writeFile(filePath, JSON.stringify(req.body, null, 2));
+    } catch (err: unknown) {
+      console.error("error writing file", err);
+      return res.status(500).json({ message: "failed to save the file" });
+    }
     const message = tools.buildMessage(req.body);
 
     await tools.DiscordWebhook(message);
