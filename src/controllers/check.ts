@@ -53,6 +53,7 @@ export const GitLabWebHook = async (req: Request, res: Response) => {
 
     const project_name = project?.name;
     const status = object_attributes?.status;
+    const branch = project?.default_branch;
 
     if (project_name && status) {
       const guild = await discordClient.guilds.fetch(GUILD_ID);
